@@ -2,7 +2,5 @@ google-generativeai
 protobuf==4.25.3
 google-ai-generativelanguage==0.6.4
 streamlit
-google-generativeai
 PyPDF2>=2.0.0
 python-docx
-protobuf==4.25.3
