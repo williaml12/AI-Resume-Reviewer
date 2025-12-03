@@ -220,8 +220,8 @@ st.title("📄 AI Resume Reviewer")
 st.write("Upload your resume and optionally paste a job description. The app extracts text from the file, sends it to Gemini, and returns a structured analysis.")
 
 uploaded_file = st.file_uploader("Upload resume (PDF, DOCX, TXT)", type=["pdf", "docx", "txt"])
-job_title = st.text_input("Target Job Title (optional)")
-job_description = st.text_area("Job Description / Requirements (optional)", height=150)
+job_title = st.text_input("Target Job Title")
+job_description = st.text_area("Job Description / Requirements", height=150)
 
 st.markdown("---")
 
