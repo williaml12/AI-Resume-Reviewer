@@ -220,14 +220,18 @@ st.title("📄 AI Resume Reviewer")
 st.write("Upload your resume and optionally paste a job description. The app extracts text from the file, sends it to Gemini, and returns a structured analysis.")
 
 uploaded_file = st.file_uploader("Upload resume (PDF, DOCX, TXT)", type=["pdf", "docx", "txt"])
-job_title = st.text_input("Target Job Title", label_visibility="visible")
-job_description = st.text_area("Job Description / Requirements", height=150, label_visibility="visible")
+job_title = st.text_input("Target Job Title")
+job_description = st.text_area("Job Description / Requirements", height=150)
 
 st.markdown("---")
 
 if st.button("🔍 Analyze My Resume"):
     if not uploaded_file:
         st.error("Please upload a resume file first.")
+    elif not job_title:
+        st.error("Please enter the target job title.")
+    elif not job_description:
+        st.error("Please enter the job description.")
     else:
         with st.spinner("Extracting text from your document..."):
             resume_text = extract_text_from_file(uploaded_file)
