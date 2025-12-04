@@ -220,6 +220,24 @@ st.title("📄 AI Resume Reviewer")
 # st.write("Upload your resume and optionally paste a job description. The app extracts text from the file, sends it to Gemini, and returns a structured analysis.")
 st.write("Upload your resume and get industry-ready feedback powered by Google Gemini.")
 
+st.write("---")
+
+# -----------------------
+# 💡 About the Project
+# -----------------------
+with st.expander("💡 About the Project", expanded=True):
+    st.markdown("""
+**AI Resume Reviewer** simplifies your resume improvement process using generative AI:
+
+- Analyzes your resume content  
+- Identifies strengths & weaknesses  
+- Suggests improvements for clarity, relevance, and professionalism  
+- Gives tips tailored to your target job or industry  
+- No downloads or coding required — upload and get instant feedback  
+    """)
+
+st.write("---")
+
 uploaded_file = st.file_uploader("Upload resume (PDF, DOCX, TXT)", type=["pdf", "docx", "txt"])
 job_title = st.text_input("Target Job Title")
 job_description = st.text_area("Job Description / Requirements", height=150)
