@@ -72,3 +72,10 @@ streamlit run app.py
 ---
 
 ## 📌 Future Improvements
+- Add resume score metrics
+- Support multiple resume versions
+- Compare resume to job description
+- Add exportable PDF report
+- Add dark/light themes
+
+  
