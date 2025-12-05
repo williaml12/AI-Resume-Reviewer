@@ -38,18 +38,12 @@ It evaluates structure, clarity, tone, keywords, and job relevance — helping j
 
 ---
 
-## ▶️ Getting Started (Local Setup)
+## 📂 Project Structure
 
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/your-username/AI-Resume-Reviewer.git
-cd AI-Resume-Reviewer
-
-### 2. Install dependencies
-pip install -r requirements.txt
-
-### 3. Run the app
-streamlit run app.py
-
-
+```plaintext
+AI-Resume-Reviewer/
+├── app.py              # Main Streamlit application
+├── requirements.txt    # Dependencies
+├── README.md           # Documentation
+└── assets/             # Optional images or resources
+plaintext'''
