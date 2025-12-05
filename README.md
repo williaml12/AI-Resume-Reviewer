@@ -38,6 +38,11 @@ It evaluates structure, clarity, tone, keywords, and job relevance — helping j
 
 ---
 
+## ▶️ Getting Started (Local Setup)
+1. Clone the repo
+git clone https://github.com/your-username/AI-Resume-Reviewer.git
+cd AI-Resume-Reviewer
+
 ## 📂 Project Structure
 
 ```plaintext
