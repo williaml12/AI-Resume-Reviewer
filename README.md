@@ -46,11 +46,7 @@ AI-Resume-Reviewer/
 ├── requirements.txt    # Dependencies
 ├── README.md           # Documentation
 └── assets/             # Optional images or resources
-'''
 
 ---
 
-## ▶️ Getting Started (Local Setup)
-1. Clone the repo
-git clone https://github.com/your-username/AI-Resume-Reviewer.git
-cd AI-Resume-Reviewer
+
