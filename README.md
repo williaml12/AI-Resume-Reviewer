@@ -46,3 +46,5 @@ AI-Resume-Reviewer/
 ├── requirements.txt    # Dependencies
 ├── README.md           # Documentation
 └── assets/             # Optional images or resources
+
+---
