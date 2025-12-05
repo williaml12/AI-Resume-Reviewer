@@ -38,7 +38,7 @@ It evaluates structure, clarity, tone, keywords, and job relevance — helping j
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```plaintext
 AI-Resume-Reviewer/
@@ -46,10 +46,3 @@ AI-Resume-Reviewer/
 ├── requirements.txt    # Dependencies
 ├── README.md           # Documentation
 └── assets/             # Optional images or resources
-
----
-
-## ▶️ Getting Started (Local Setup)
-1. Clone the repo
-git clone https://github.com/your-username/AI-Resume-Reviewer.git
-cd AI-Resume-Reviewer
