@@ -277,12 +277,41 @@ if st.button("🔍 Analyze My Resume"):
             if was_truncated:
                 st.warning("Resume text was truncated to fit the model prompt (very long resume).")
 
+#             # Build prompt asking for JSON only
+#             prompt = f"""
+# You are an expert resume reviewer. Analyze the resume and produce a JSON object ONLY (no surrounding text)
+# with the following keys: score, summary, strengths, weaknesses, suggestions, ats_tips, alignment.
+
+# - score: a string percentage like "82%"
+# - summary: short paragraph
+# - strengths: list of short bullet items
+# - weaknesses: list of short bullet items
+# - suggestions: list of specific actionable changes
+# - ats_tips: list of short tips for ATS optimization
+# - alignment: short description of how well it matches the provided job
+
+# Resume:
+# {resume_text}
+
+# Job target:
+# Job Title: {job_title}
+# Job Description / Requirements:
+# {job_description}
+
+# Return STRICTLY valid JSON. Example:
+# {{"score":"80%","summary":"...","strengths":["..."],"weaknesses":["..."],"suggestions":["..."],"ats_tips":["..."],"alignment":"..."}}
+# """
+
+
+
+
             # Build prompt asking for JSON only
             prompt = f"""
 You are an expert resume reviewer. Analyze the resume and produce a JSON object ONLY (no surrounding text)
-with the following keys: score, summary, strengths, weaknesses, suggestions, ats_tips, alignment.
+with the following keys: score, score_explanation, summary, strengths, weaknesses, suggestions, ats_tips, alignment.
 
 - score: a string percentage like "82%"
+- score_explanation: 2–4 sentences explaining why this score was given (clarity, relevance, formatting, ATS readiness, matching job requirements)
 - summary: short paragraph
 - strengths: list of short bullet items
 - weaknesses: list of short bullet items
@@ -299,7 +328,16 @@ Job Description / Requirements:
 {job_description}
 
 Return STRICTLY valid JSON. Example:
-{{"score":"80%","summary":"...","strengths":["..."],"weaknesses":["..."],"suggestions":["..."],"ats_tips":["..."],"alignment":"..."}}
+{{
+  "score": "80%",
+  "score_explanation": "The resume demonstrates strong technical skills but lacks quantifiable impact. Formatting inconsistencies lowered ATS readiness.",
+  "summary": "...",
+  "strengths": ["..."],
+  "weaknesses": ["..."],
+  "suggestions": ["..."],
+  "ats_tips": ["..."],
+  "alignment": "..."
+}}
 """
 
             # Call Gemini
