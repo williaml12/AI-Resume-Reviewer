@@ -381,6 +381,10 @@ Return STRICTLY valid JSON. Example:
                     st.header("📊 Results Overview")
                     st.metric("Resume Score", result.get("score", "N/A"))
 
+                    # NEW: Score Explanation
+                    st.subheader("📘 Why This Score?")
+                    st.write(result.get("score_explanation", "No explanation provided."))
+
                     st.subheader("🧠 Summary")
                     st.write(result.get("summary", ""))
 
