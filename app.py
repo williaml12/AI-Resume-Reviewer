@@ -307,7 +307,7 @@ if st.button("🔍 Analyze My Resume"):
 
             # Build prompt asking for JSON only
             prompt = f"""
-You are an expert resume reviewer. Analyze the resume and produce a JSON object ONLY (no surrounding text)
+You are an expert resume reviewer. Analyze the resume against the job description and requirements and produce a JSON object ONLY (no surrounding text)
 with the following keys: score, score_explanation, summary, strengths, weaknesses, suggestions, ats_tips, alignment.
 Let me analyze the match between the resume and the job description and requirements:
 
