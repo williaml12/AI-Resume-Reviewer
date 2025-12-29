@@ -240,7 +240,7 @@ with st.expander("💡 About the Project", expanded=True):
     st.markdown("""
 **AI Resume Reviewer** simplifies your resume improvement process using generative AI:
 
-- Analyzes your resume content  
+- Analyzes your resume content against the job description and requirements
 - Give match score compare resume to job description and requirements
 - Identifies strengths & weaknesses  
 - Suggests improvements for clarity, relevance, and professionalism  
