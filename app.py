@@ -241,10 +241,12 @@ with st.expander("💡 About the Project", expanded=True):
 **AI Resume Reviewer** simplifies your resume improvement process using generative AI:
 
 - Analyzes your resume content  
+- Give match score compare resume to job description and requirements
 - Identifies strengths & weaknesses  
 - Suggests improvements for clarity, relevance, and professionalism  
 - Gives tips tailored to your target job or industry  
 - No downloads or coding required — upload and get instant feedback  
+- No login or account required
     """)
 
 st.write("---")
