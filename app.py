@@ -255,8 +255,11 @@ job_description = st.text_area("Job Description / Requirements", height=150)
 
 st.markdown("---")
 
-if st.button("🔍 Analyze My Resume"):
-    if not uploaded_file:
+col1, col2, col3 = st.columns([1, 2, 1])
+
+with col2:
+    if st.button("🔍 Analyze My Resume", use_container_width=True):
+        if not uploaded_file:
         st.error("Please upload a resume file first.")
     elif not job_title:
         st.error("Please enter the target job title.")
@@ -276,6 +279,33 @@ if st.button("🔍 Analyze My Resume"):
             resume_text, was_truncated = truncate_text(resume_text, max_chars=30000)
             if was_truncated:
                 st.warning("Resume text was truncated to fit the model prompt (very long resume).")
+        pass
+
+# if st.button("🔍 Analyze My Resume"):
+#     if not uploaded_file:
+#         st.error("Please upload a resume file first.")
+#     elif not job_title:
+#         st.error("Please enter the target job title.")
+#     elif not job_description:
+#         st.error("Please enter the job description.")
+#     else:
+#         with st.spinner("Extracting text from your document..."):
+#             resume_text = extract_text_from_file(uploaded_file)
+
+#         if not resume_text:
+#             st.error(
+#                 "Could not extract readable text from the uploaded file. "
+#                 "If it's a scanned PDF/image, please OCR it first or paste the resume text manually."
+#             )
+#         else:
+#             # Truncate if too long and warn user
+#             resume_text, was_truncated = truncate_text(resume_text, max_chars=30000)
+#             if was_truncated:
+#                 st.warning("Resume text was truncated to fit the model prompt (very long resume).")
+
+
+
+        
 
 #             # Build prompt asking for JSON only
 #             prompt = f"""
