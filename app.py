@@ -286,8 +286,8 @@ st.markdown("---")
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    analyze_clicked = st.button("🔍 Analyze My Resume", use_container_width=True)
-    # analyze_clicked = st.button("🔍 Analyze My Resume")
+    # analyze_clicked = st.button("🔍 Analyze My Resume", use_container_width=True)
+    analyze_clicked = st.button("🔍 Analyze My Resume")
 
 
 if analyze_clicked:
