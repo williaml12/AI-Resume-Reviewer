@@ -94,15 +94,3 @@ This app is shared for personal and educational use.
 All AI-generated feedback should be used with discretion and is not a substitute for professional career services.
 
 The project is released under the [MIT License](LICENSE).
-
-```yaml
-
----
-
-If you want, I can also create:
-
-✅ `requirements.txt`  
-✅ a logo banner for your README  
-✅ a polished UI screenshot section  
-Just tell me!
-```
